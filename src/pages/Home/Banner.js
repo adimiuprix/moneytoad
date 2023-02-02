@@ -109,12 +109,12 @@ function Banner() {
     if (success)
         {
           getStatus();
-          //notify("Selled successfully",address);
-          //createNotification("Selled Successfully")
+          notify("Selled successfully",address);
+          createNotification("Selled Successfully")
         }
     else{
-      //notify("Sell failed",address);
-      //createNotification("Sell Failed")
+      notify("Sell failed",address);
+      createNotification("Sell Failed")
     }
     //console.log('status=',status);
   }
@@ -140,19 +140,19 @@ function Banner() {
     setRefer(code)
     setTimeCount(true)
   },[])
-//  useEffect(() => {
-//     if(timeTracking)
-//       setTimeout(() => {
-//           let left = calculateTimeLeft()
-//           if (!left)
-//             setTimeTrackingStop(false)
-//           else
-//             setTimeLeft(left);
+ useEffect(() => {
+    if(timeTracking)
+      setTimeout(() => {
+          let left = calculateTimeLeft()
+          if (!left)
+            setTimeTrackingStop(false)
+          else
+            setTimeLeft(left);
           
-//       }, 1000)
-//     else
-//       setTimeCount(true)
-//   });
+      }, 1000)
+    else
+      setTimeCount(true)
+  });
 
     const copyToClipboard = () => {
       const tempInput = document.createElement('input')
@@ -289,18 +289,18 @@ function Banner() {
                         alignItems:'center',
                         justifyContent:'center'  
               }}>
-                {/* <img
+                <img
                     src={WALLET_IMAGE}
                     alt="eth green logo"
                     width={width > 500 ? "100px" : "0px"}
                   />
-                   */}
+                  
                 <Typography
                       fontSize={{ md: "24px", xs: "14x" }}
                       px={1}
                       py={1}
                       style={{
-                          // backgroundColor:'rgb(255, 133, 5)',
+                          backgroundColor:'rgb(255, 133, 5)',
                           borderRadius:'12px',
                           color:'#febf33',
                           textAlign:'center',
@@ -409,18 +409,18 @@ function Banner() {
                         <Box style={styles.value}> {balanceToad != null? parseInt(parseInt(balanceToad*1e6)/1e6):0} Toad</Box>
                     </Box>
                     <Typography style={styles.antWrapper}>
-                        {/* <input style={styles.antInput} ></input> */}
+                        <input style={styles.antInput} ></input>
                         <input
                         
                             style={styles.antInput}
                             value={toad}
-                            // onChange={(event) =>{
-                            //   const re = /^(0|[1-9]\d*)(\.\d+)?$/;
-                            //   if (event.target.value === '' || re.test(event.target.value)) {
-                            //     event.target.value < 0
-                            //         ? setToad(0)
-                            //         : setToad(event.target.value)}
-                            // }}
+                            onChange={(event) =>{
+                              const re = /^(0|[1-9]\d*)(\.\d+)?$/;
+                              if (event.target.value === '' || re.test(event.target.value)) {
+                                event.target.value < 0
+                                    ? setToad(0)
+                                    : setToad(event.target.value)}
+                            }}
                             onChange={(e)=>setToad(e.target.value)}
                             display="flex"
 
