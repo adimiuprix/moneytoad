@@ -188,7 +188,7 @@ function Banner() {
           <Grid container display="flex" alignItems="center" justifyContent="center">
             
             <Grid item xs={12} sm={12}>
-              {/* <Box 
+              <Box 
                   px={{ md: 10, xs: 0 }}
                   py={5}
                   mt={10}
@@ -261,7 +261,7 @@ function Banner() {
                     </Typography>
                   )}
                     
-                </Box> */}
+                </Box>
               <Box display="flex" alignItems="center" justifyContent="center" mt={15}>
                 <img
                   src={TOAD_BANNER2}
