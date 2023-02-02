@@ -1,3 +1,3 @@
 export const BXNFT_ABI = require("../ABI/BXNFT.json");
 
-export const BXNFT_CONTRACT = "0xced7c20e262be580c2b764a8a8aa51fce12e9630";
+export const BXNFT_CONTRACT = "0xd2d28013E97161cb58bfD36643cC93a3E137ec37";
